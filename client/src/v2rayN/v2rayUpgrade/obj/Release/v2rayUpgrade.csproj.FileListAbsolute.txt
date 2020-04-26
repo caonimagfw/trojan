@@ -1,0 +1,8 @@
+E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\bin\Release\v2rayUpgrade.exe.config
+E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\bin\Release\v2rayUpgrade.exe
+E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Release\v2rayUpgrade.csprojAssemblyReference.cache
+E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Release\v2rayUpgrade.MainForm.resources
+E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Release\v2rayUpgrade.Properties.Resources.resources
+E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Release\v2rayUpgrade.csproj.GenerateResource.cache
+E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Release\v2rayUpgrade.csproj.CoreCompileInputs.cache
+E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Release\v2rayUpgrade.exe
