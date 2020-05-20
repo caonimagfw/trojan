@@ -1,5 +1,5 @@
 #!/bin/bash
-#fonts color
+#fonts color 521
 yellow(){
     echo -e "\033[33m\033[01m$1\033[0m"
 }
@@ -101,7 +101,7 @@ cat > /usr/local/trojan-go/config.json <<-EOF
         "log_level": 1,
         "ssl": {
             "cert": "/root/ssl/${last_domain}/fullchain.pem",
-            "key": "/root/ssl/${last_domain}/privkey.pem",
+            "key": "/root/ssl/${last_domain}/privkey.pem"
         }
     }
 EOF
