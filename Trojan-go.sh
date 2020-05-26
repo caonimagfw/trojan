@@ -46,7 +46,7 @@ function install_trojan(){
         #your_domain = 'xxx.xx.com'
     
     	green "=========================================="
-    	green "       开始安装trojan-go 05"  
+    	green "       开始安装trojan-go 06"  
     	green "=========================================="
     	sleep 1s
         yum -y install unzip
@@ -125,7 +125,7 @@ cat > /usr/local/caddy/Caddyfile <<-EOF
 
 
                 :80 {
-                        redir https://${your_domain}:${trojan_local_port}                  
+                        redir https://{host}:${trojan_local_port}                  
                 }
 
 EOF
