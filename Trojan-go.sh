@@ -46,7 +46,7 @@ function install_trojan(){
         #your_domain = 'xxx.xx.com'
     
     	green "=========================================="
-    	green "       开始安装trojan-go"
+    	green "       开始安装trojan-go" 02
     	green "=========================================="
     	sleep 1s
         yum -y install unzip
@@ -63,15 +63,18 @@ function install_trojan(){
         read trojan_passwd
     	
         green "======================="
-        yellow "Input localhost port"
+        yellow "Input localhost listen port, eg. 443"
         green "======================="
         read trojan_local_port
 
         green "======================="
-        yellow "Input http port"
+        yellow "Input http web port , eg. 80"
         green "======================="
         read trojan_http_port
 
+        if [ '${trojan_http_port}' = '80' ];
+            trojan_http_port = 8100
+        fi 
     	last_domain=$(echo ${your_domain} | awk -F. '{print $2"."$3}')
     	#     
         if [ ! -d "/usr/local/trojan-go" ]; then
@@ -100,8 +103,8 @@ cat > /usr/local/trojan-go/config.json <<-EOF
         ],
         "log_level": 1,
         "ssl": {
-            "cert": "/root/ssl/${last_domain}/fullchain.pem",
-            "key": "/root/ssl/${last_domain}/privkey.pem"
+            "cert": "/root/ssl/${last_domain}.crt",
+            "key": "/root/ssl/${last_domain}.key"
         }
     }
 EOF
@@ -111,17 +114,19 @@ EOF
             cp -f "/usr/local/caddy/Caddyfile" "/usr/local/caddy/Caddyfile.trojan."$(date +"%Y%m%d_%H%M%S").bak
             rm -rf  "/usr/local/caddy/Caddyfile" 
         fi
+
 cat > /usr/local/caddy/Caddyfile <<-EOF
                 :${trojan_http_port} {
                         root /usr/local/caddy/www
                         timeouts none
-                        #tls /root/ssl/${last_domain}/cert.pem /root/ssl/${last_domain}/privkey.pem
+                        #tls /root/ssl/${last_domain}.crt /root/ssl/${last_domain}.key
                         gzip
                 }
 
-                #:80 {
-                #        redir https://${your_domain}{uri}                    
-                #}
+
+                :80 {
+                        redir https://${your_domain}:${trojan_http_port}                  
+                }
 
 EOF
        
