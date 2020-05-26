@@ -46,7 +46,7 @@ function install_trojan(){
         #your_domain = 'xxx.xx.com'
     
     	green "=========================================="
-    	green "       开始安装trojan-go" 03
+    	green "       开始安装trojan-go 05"  
     	green "=========================================="
     	sleep 1s
         yum -y install unzip
@@ -72,8 +72,8 @@ function install_trojan(){
         green "======================="
         read trojan_http_port
 
-        if [ '${trojan_http_port}' = '80' ]; then
-            trojan_http_port = 8100
+        if [ "$trojan_http_port" == "80" ]; then
+            trojan_http_port=8100
         fi 
     	last_domain=$(echo ${your_domain} | awk -F. '{print $2"."$3}')
     	#     
