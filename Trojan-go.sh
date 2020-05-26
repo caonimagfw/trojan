@@ -125,7 +125,7 @@ cat > /usr/local/caddy/Caddyfile <<-EOF
 
 
                 :80 {
-                        redir https://${your_domain}:${trojan_http_port}                  
+                        redir https://${your_domain}:${trojan_local_port}                  
                 }
 
 EOF
