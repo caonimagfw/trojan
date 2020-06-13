@@ -1,9 +1,0 @@
-E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\bin\Debug\v2rayUpgrade.exe.config
-E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\bin\Debug\v2rayUpgrade.exe
-E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\bin\Debug\v2rayUpgrade.pdb
-E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Debug\v2rayUpgrade.MainForm.resources
-E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Debug\v2rayUpgrade.Properties.Resources.resources
-E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Debug\v2rayUpgrade.csproj.GenerateResource.cache
-E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Debug\v2rayUpgrade.csproj.CoreCompileInputs.cache
-E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Debug\v2rayUpgrade.exe
-E:\fwall\v2rayN-3.18\v2rayN\v2rayUpgrade\obj\Debug\v2rayUpgrade.pdb
